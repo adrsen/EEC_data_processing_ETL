@@ -4,9 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+traitlets = "==4.3.3"
 
 [dev-packages]
 pyspark = "==2.4.0"
+traitlets = "==4.3.3"
 ipython = "== 7.16.0"
 "flake8" = "*"
 
