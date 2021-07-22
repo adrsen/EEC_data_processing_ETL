@@ -85,10 +85,10 @@ Full details of all possible options can be found [here](http://spark.apache.org
 ## Debugging Spark Jobs Using `start_spark`
 
 It is not practical to test and debug Spark jobs by sending them to a cluster using `spark-submit` and examining stack traces for clues on what went wrong.
-Therefore `start_spark` function - found in `dependencies/spark.py` - is available to facilitate the development of Spark jobs that are aware of the context in which they are being executed 
+Therefore `start_spark` function - found in `dependencies/spark.py` - is available to facilitate the development of Spark jobs that are aware of the context in which they are being executed.
 
 
-## Automated Testing
+## Unit Tests
 
 In order to test with Spark, we use the `pyspark` Python package, which is bundled with the Spark JARs required to programmatically start-up and tear-down a local Spark instance
 
@@ -100,7 +100,7 @@ pipenv run python -m unittest tests/test_*.py
 
 ## Managing Project Dependencies using Pipenv
 
-We use [pipenv](https://docs.pipenv.org) for managing project dependencies and Python environments (e.g. PySpark, flake8 for code linting, IPython for interactive console sessions, etc.), are described in the `Pipfile`. Their **precise** downstream dependencies are described in `Pipfile.lock`.
+[pipenv](https://docs.pipenv.org) is used for managing project dependencies and Python environments (e.g. PySpark, flake8 for code linting, IPython for interactive console sessions, etc.), are described in the `Pipfile`. Their **precise** downstream dependencies are described in `Pipfile.lock`.
 
 
 ### Installing this Projects' Dependencies
